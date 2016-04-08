@@ -1,0 +1,22 @@
+digraph {
+    rankdir="LR";
+
+    AST1[label="AST"];
+    AST2[label="AST"];
+    Template1[label="template"];
+    Template2[label="template"];
+
+    CPAN -> Modules;
+    Modules -> AST1;
+
+    GitHubWiki -> AST2;
+
+    AST1 -> MAGIC;
+    AST2 -> MAGIC;
+    
+    MAGIC -> Homepage;
+    Template2 -> Homepage;
+
+    Template1 -> Book;
+    MAGIC -> Book;
+}
