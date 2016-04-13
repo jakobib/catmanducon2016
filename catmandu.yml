@@ -1,0 +1,18 @@
+---
+importer:
+    ZenodoCatmandu:
+        package: OAI
+        options:
+            url: https://zenodo.org/oai2d 
+            metadataPrefix: oai_datacite3 
+            set: user-catmandu
+            handler: struct 
+    ZenodoCatmanduDOIs:
+        package: OAI
+        options:
+            url: https://zenodo.org/oai2d 
+            metadataPrefix: oai_datacite3 
+            set: user-catmandu
+            handler: struct 
+            fixe: retain_field(_id)
+

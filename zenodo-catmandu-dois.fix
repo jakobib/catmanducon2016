@@ -1,0 +1,8 @@
+#!/usr/bin/env catmandu run
+# get a list of DOIs from Zenodo community catmandu
+do importer(ZenodoCatmandu)
+    xml_simple(_metadata)
+    move_field(_metadata.payload.resource.identifier.content,doi)
+    retain_field(doi)
+    add_to_exporter(.,Text)
+end
